@@ -128,21 +128,21 @@ Quick nav:
 
 This package automatically provides a route you can use to ajax-add a product to the shopping cart. Just call `/shopping-cart/add-product` with the following params:
 
-```json
-{
-    'product_id': <required, id must exist in products table>,
-    'quantity': <required, must be integer>,
-    'variation_id': <required only if using product variations>
+```javascript
+data = {
+    "product_id": "", // required, id must exist in products table,
+    "quantity": "", // required, must be integer,
+    "variation_id": "" // required only if using product variations
 }
 ```
 
 The ajax call will return the following:
 
-```json
-{
-    'success': true,
-    'message': <success message, can be customized in the cart.php lang file>,
-    'product_count': <number of products in the cart now>,
+```javascript
+result = {
+    "success": true,
+    "message": "", // success message, can be customized in the cart.php lang file,
+    "product_count": 1, // number of products in the cart now,
 }
 ```
 
@@ -164,21 +164,21 @@ If you need do all of the above yourself for whatever reason, you can use the `s
 
 This package automatically provides a route you can use to ajax-update the shopping cart. Just call `/shopping-cart/update-product` with the following params:
 
-```json
-{
-    'product_id': <required, id must exist in products table and cart>,
-    'quantity': <required, must be integer>,
-    'variation_id': <required if using product variations>
+```javascript
+data = {
+    "product_id": "", // required, id must exist in products table and cart
+    "quantity": 1, // required, must be integer,
+    "variation_id": "", // required if using product variations
 }
 ```
 
 The ajax call will return the following:
 
-```json
-{
-    'success': true, // false if product was not in cart
-    'message': <success message, can be customized in the cart.php lang file>,
-    'product_count': <number of products in the cart now>,
+```javascript
+result = {
+    "success": true, // false if product id or variation was not in the cart
+    "message": "", // success message, can be customized in the cart.php lang file,
+    "product_count": 1, // number of products in the cart now,
 }
 ```
 
@@ -200,20 +200,20 @@ If you need do all of the above yourself for whatever reason, you can use the `s
 
 This package automatically provides a route you can use to ajax-update the shopping cart. Just call `/shopping-cart/remove-product` with the following params:
 
-```json
-{
-    'product_id': <required, id must exist in products table and cart>,
-    'variation_id': <required if using product variations>
+```javascript
+data = {
+    "product_id": "", // required, id must exist in products table and cart
+    "variation_id": "", // required if using product variations
 }
 ```
 
 The ajax call will return the following:
 
-```json
-{
-    'success': true, // false if product was not in cart
-    'message': <success message, can be customized in the cart.php lang file>,
-    'product_count': <number of products in the cart now>,
+```javascript
+result = {
+    "success": true, // false if product id or variation was not in the cart
+    "message": "", // success message, can be customized in the cart.php lang file,
+    "product_count": 0, // number of products in the cart now,
 }
 ```
 
