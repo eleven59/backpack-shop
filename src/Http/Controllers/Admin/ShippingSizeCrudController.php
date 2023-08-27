@@ -47,7 +47,7 @@ class ShippingSizeCrudController extends CrudController
         CRUD::column('name')
             ->type('text')
             ->label(__('eleven59.backpack-shop::shipping-size.crud.name.label'));
-        CRUD::orderBy('name');
+        CRUD::orderBy('lft');
 
         Widget::add()
             ->type('alert')
