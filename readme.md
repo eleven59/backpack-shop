@@ -28,15 +28,6 @@ I'm also planning to make Backpack Pro optional, so it will be more accessible. 
 
 ## Installation
 
-First, make sure you are running `PHP 8.1+` and have installed:
-
-- Backpack (`5.x`) ([install guide](https://backpackforlaravel.com/docs/5.x/installation))
-- Backpack Pro (sorry, it's required for now; see [pricing](https://backpackforlaravel.com/pricing))
-
-This package was tested extensively with Laravel 8 and Backpack 5. It seemed fine with Laravel 9 and 10, and Backpack 6 as well, but no guarantees (yet). I will be updating the package for Backpack 6 compatibility, but I have no idea on the ETA for that.
-
-I'm also planning to make Backpack Pro optional, so it will be more accessible. Again, no ETA.
-
 ### Step 1 - require package
 
 Install the package via Composer
