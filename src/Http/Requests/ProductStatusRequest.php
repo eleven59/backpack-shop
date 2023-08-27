@@ -40,12 +40,12 @@ class ProductStatusRequest extends FormRequest
     public function messages()
     {
         return [
-            'status.required' => __('eleven59.backpack-shop::product-status.request.status.required'),
-            'status.min' => __('eleven59.backpack-shop::product-status.request.status.min'),
-            'status.max' => __('eleven59.backpack-shop::product-status.request.status.max'),
-            'slug.required_with' => __('eleven59.backpack-shop::product-status.request.slug.required_with'),
-            'slug.min' => __('eleven59.backpack-shop::product-status.request.slug.min'),
-            'slug.max' => __('eleven59.backpack-shop::product-status.request.slug.max'),
+            'status.required' => __('backpack-shop::product-status.request.status.required'),
+            'status.min' => __('backpack-shop::product-status.request.status.min'),
+            'status.max' => __('backpack-shop::product-status.request.status.max'),
+            'slug.required_with' => __('backpack-shop::product-status.request.slug.required_with'),
+            'slug.min' => __('backpack-shop::product-status.request.slug.min'),
+            'slug.max' => __('backpack-shop::product-status.request.slug.max'),
         ];
     }
 

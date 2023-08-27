@@ -14,15 +14,15 @@
 @endphp
 
 <div class="p-3">
-    <label>{{ __('eleven59.backpack-shop::backpack-shop.crud.shipping-region.countries.filter-label') }}</label>
+    <label>{{ __('backpack-shop::backpack-shop.crud.shipping-region.countries.filter-label') }}</label>
     <div>
-        <a class="btn btn-secondary select-all-countries" data-select-targets='.{{ $field['name'] }}-filter-value input[type="checkbox"]'>{{ __('eleven59.backpack-shop::backpack-shop.crud.shipping-region.countries.select-all-caption') }}</a>
-        <a class="btn btn-secondary select-no-countries" data-select-targets='.{{ $field['name'] }}-filter-value input[type="checkbox"]'>{{ __('eleven59.backpack-shop::backpack-shop.crud.shipping-region.countries.select-none-caption') }}</a>
-        <a class="btn btn-secondary select-unselected-countries" data-skip='@json(bpshop_mapped_countries('skip'))' data-select-targets=".{{ $field['name'] }}-filter-value">{{ __('eleven59.backpack-shop::backpack-shop.crud.shipping-region.countries.select-unselected-caption') }}</a>
+        <a class="btn btn-secondary select-all-countries" data-select-targets='.{{ $field['name'] }}-filter-value input[type="checkbox"]'>{{ __('backpack-shop::backpack-shop.crud.shipping-region.countries.select-all-caption') }}</a>
+        <a class="btn btn-secondary select-no-countries" data-select-targets='.{{ $field['name'] }}-filter-value input[type="checkbox"]'>{{ __('backpack-shop::backpack-shop.crud.shipping-region.countries.select-none-caption') }}</a>
+        <a class="btn btn-secondary select-unselected-countries" data-skip='@json(bpshop_mapped_countries('skip'))' data-select-targets=".{{ $field['name'] }}-filter-value">{{ __('backpack-shop::backpack-shop.crud.shipping-region.countries.select-unselected-caption') }}</a>
     </div>
     <div class="pt-2 pb-2"></div>
     <input type="text" class="form-control bp-countries-filter" data-filter-targets=".{{ $field['name'] }}-filter-value">
-    <small>{{ __('eleven59.backpack-shop::backpack-shop.crud.shipping-region.countries.filter-hint') }}</small>
+    <small>{{ __('backpack-shop::backpack-shop.crud.shipping-region.countries.filter-hint') }}</small>
 </div>
 
 @include('crud::fields.inc.wrapper_start')

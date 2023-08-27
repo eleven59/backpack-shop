@@ -56,7 +56,7 @@ trait AutomaticServiceProvider
         }
 
         if ($this->packageDirectoryExistsAndIsNotEmpty('resources/lang')) {
-            $this->loadTranslationsFrom($this->packageLangsPath(), $this->vendorNameDotPackageName());
+            $this->loadTranslationsFrom($this->packageLangsPath(), 'backpack-shop');
         }
 
         if ($this->packageDirectoryExistsAndIsNotEmpty('resources/views')) {
@@ -219,7 +219,7 @@ trait AutomaticServiceProvider
 
     protected function publishedLangsPath()
     {
-        return resource_path('lang/vendor/'.$this->vendorName);
+        return resource_path('lang/vendor/backpack-shop');
     }
 
     // -------------

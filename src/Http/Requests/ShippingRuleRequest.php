@@ -43,14 +43,14 @@ class ShippingRuleRequest extends FormRequest
     public function messages()
     {
         return [
-            'shipping_region_id.required' => __('eleven59.backpack-shop::shipping-rule.request.shipping_region_id.required'),
-            'shipping_region_id.exists' => __('eleven59.backpack-shop::shipping-rule.request.shipping_region_id.exists'),
-            'shipping_size_id.required*' => __('eleven59.backpack-shop::shipping-rule.request.shipping_size_id.required_if'),
-            'shipping_size_id.exists' => __('eleven59.backpack-shop::shipping-rule.request.shipping_size_id.exists'),
-            'max_weight.required*' => __('eleven59.backpack-shop::shipping-rule.request.max_weight.required_if'),
-            'price.required' => __('eleven59.backpack-shop::shipping-rule.request.price.required'),
-            'shipping_vat_class_id.required_unless' => __('eleven59.backpack-shop::shipping-rule.request.shipping_vat_class_id.required_unless'),
-            'shipping_vat_class_id.exists' => __('eleven59.backpack-shop::shipping-rule.request.shipping_vat_class_id.exists'),
+            'shipping_region_id.required' => __('backpack-shop::shipping-rule.request.shipping_region_id.required'),
+            'shipping_region_id.exists' => __('backpack-shop::shipping-rule.request.shipping_region_id.exists'),
+            'shipping_size_id.required*' => __('backpack-shop::shipping-rule.request.shipping_size_id.required_if'),
+            'shipping_size_id.exists' => __('backpack-shop::shipping-rule.request.shipping_size_id.exists'),
+            'max_weight.required*' => __('backpack-shop::shipping-rule.request.max_weight.required_if'),
+            'price.required' => __('backpack-shop::shipping-rule.request.price.required'),
+            'shipping_vat_class_id.required_unless' => __('backpack-shop::shipping-rule.request.shipping_vat_class_id.required_unless'),
+            'shipping_vat_class_id.exists' => __('backpack-shop::shipping-rule.request.shipping_vat_class_id.exists'),
         ];
     }
 }

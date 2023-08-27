@@ -31,8 +31,8 @@ class ShippingSizeCrudController extends CrudController
         CRUD::setModel(ShippingSize::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/shipping-size');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::shipping-size.crud.singular'),
-            __('eleven59.backpack-shop::shipping-size.crud.plural')
+            __('backpack-shop::shipping-size.crud.singular'),
+            __('backpack-shop::shipping-size.crud.plural')
         );
     }
 
@@ -46,14 +46,14 @@ class ShippingSizeCrudController extends CrudController
     {
         CRUD::column('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::shipping-size.crud.name.label'));
+            ->label(__('backpack-shop::shipping-size.crud.name.label'));
         CRUD::orderBy('lft');
 
         Widget::add()
             ->type('alert')
             ->class('alert alert-danger mb-2')
-            ->heading(__('eleven59.backpack-shop::shipping-size.crud.list-notice.heading'))
-            ->content(__('eleven59.backpack-shop::shipping-size.crud.list-notice.content'))
+            ->heading(__('backpack-shop::shipping-size.crud.list-notice.heading'))
+            ->content(__('backpack-shop::shipping-size.crud.list-notice.content'))
             ->to('before_content');
     }
 
@@ -69,8 +69,8 @@ class ShippingSizeCrudController extends CrudController
 
         CRUD::field('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::shipping-size.crud.name.label'))
-            ->hint(__('eleven59.backpack-shop::shipping-size.crud.name.hint'));
+            ->label(__('backpack-shop::shipping-size.crud.name.label'))
+            ->hint(__('backpack-shop::shipping-size.crud.name.hint'));
     }
 
     /**
@@ -92,8 +92,8 @@ class ShippingSizeCrudController extends CrudController
         Widget::add()
             ->type('alert')
             ->class('alert alert-danger mb-2')
-            ->heading(__('eleven59.backpack-shop::shipping-size.crud.reorder-notice.heading'))
-            ->content(__('eleven59.backpack-shop::shipping-size.crud.reorder-notice.content'))
+            ->heading(__('backpack-shop::shipping-size.crud.reorder-notice.heading'))
+            ->content(__('backpack-shop::shipping-size.crud.reorder-notice.content'))
             ->to('before_content');
     }
 }

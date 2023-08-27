@@ -29,8 +29,8 @@ class VatClassCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\VatClass::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/vat-class');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::vat-class.crud.singular'),
-            __('eleven59.backpack-shop::vat-class.crud.plural')
+            __('backpack-shop::vat-class.crud.singular'),
+            __('backpack-shop::vat-class.crud.plural')
         );
     }
 
@@ -44,7 +44,7 @@ class VatClassCrudController extends CrudController
     {
         CRUD::column('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::vat-class.crud.name.label'));
+            ->label(__('backpack-shop::vat-class.crud.name.label'));
         CRUD::orderBy('name');
     }
 
@@ -60,12 +60,12 @@ class VatClassCrudController extends CrudController
 
         CRUD::field('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::vat-class.crud.name.label'))
-            ->hint(__('eleven59.backpack-shop::vat-class.crud.name.hint'));
+            ->label(__('backpack-shop::vat-class.crud.name.label'))
+            ->hint(__('backpack-shop::vat-class.crud.name.hint'));
 
         CRUD::field('vat_percentage')
             ->type('number')
-            ->label(__('eleven59.backpack-shop::vat-class.crud.vat_percentage.label'))
+            ->label(__('backpack-shop::vat-class.crud.vat_percentage.label'))
             ->suffix('%')
             ->decimals(0)
             ->attributes([

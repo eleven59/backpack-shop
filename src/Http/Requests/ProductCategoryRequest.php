@@ -40,12 +40,12 @@ class ProductCategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => __('eleven59.backpack-shop::product-category.request.name.required'),
-            'name.min' => __('eleven59.backpack-shop::product-category.request.name.min'),
-            'name.max' => __('eleven59.backpack-shop::product-category.request.name.max'),
-            'slug.required_with' => __('eleven59.backpack-shop::product-category.request.slug.required_with'),
-            'slug.min' => __('eleven59.backpack-shop::product-category.request.slug.min'),
-            'slug.max' => __('eleven59.backpack-shop::product-category.request.slug.max'),
+            'name.required' => __('backpack-shop::product-category.request.name.required'),
+            'name.min' => __('backpack-shop::product-category.request.name.min'),
+            'name.max' => __('backpack-shop::product-category.request.name.max'),
+            'slug.required_with' => __('backpack-shop::product-category.request.slug.required_with'),
+            'slug.min' => __('backpack-shop::product-category.request.slug.min'),
+            'slug.max' => __('backpack-shop::product-category.request.slug.max'),
         ];
     }
 

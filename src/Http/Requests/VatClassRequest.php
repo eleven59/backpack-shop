@@ -39,9 +39,9 @@ class VatClassRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => __('eleven59.backpack-shop::vat-class.request.name.required'),
-            'name.max' => __('eleven59.backpack-shop::vat-class.request.name.max'),
-            'vat_percentage.required' => __('eleven59.backpack-shop::vat-class.request.vat_percentage.required'),
+            'name.required' => __('backpack-shop::vat-class.request.name.required'),
+            'name.max' => __('backpack-shop::vat-class.request.name.max'),
+            'vat_percentage.required' => __('backpack-shop::vat-class.request.vat_percentage.required'),
         ];
     }
 }

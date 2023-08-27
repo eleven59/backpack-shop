@@ -40,10 +40,10 @@ class ProductPropertyRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => __('eleven59.backpack-shop::product-property.request.title.required'),
-            'title.max' => __('eleven59.backpack-shop::product-property.request.title.max'),
-            'slug.required_with' => __('eleven59.backpack-shop::product-property.request.slug.required_with'),
-            'slug.max' => __('eleven59.backpack-shop::product-property.request.slug.max'),
+            'title.required' => __('backpack-shop::product-property.request.title.required'),
+            'title.max' => __('backpack-shop::product-property.request.title.max'),
+            'slug.required_with' => __('backpack-shop::product-property.request.slug.required_with'),
+            'slug.max' => __('backpack-shop::product-property.request.slug.max'),
         ];
     }
 

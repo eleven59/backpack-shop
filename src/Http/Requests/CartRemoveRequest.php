@@ -36,8 +36,8 @@ class CartRemoveRequest extends FormRequest
     public function messages()
     {
         return [
-            'product_id.required' => __('eleven59.backpack-shop::cart.request.product_id.required'),
-            'product_id.exists' => __('eleven59.backpack-shop::cart.request.product_id.exists'),
+            'product_id.required' => __('backpack-shop::cart.request.product_id.required'),
+            'product_id.exists' => __('backpack-shop::cart.request.product_id.exists'),
         ];
     }
 }

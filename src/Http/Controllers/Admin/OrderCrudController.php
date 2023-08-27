@@ -27,8 +27,8 @@ class OrderCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\Order::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::order.crud.singular'),
-            __('eleven59.backpack-shop::order.crud.plural')
+            __('backpack-shop::order.crud.singular'),
+            __('backpack-shop::order.crud.plural')
         );
     }
 
@@ -42,32 +42,32 @@ class OrderCrudController extends CrudController
     {
         CRUD::column('created_at')
             ->type('datetime')
-            ->label(__('eleven59.backpack-shop::order.crud.created_at.label'))
+            ->label(__('backpack-shop::order.crud.created_at.label'))
             ->format(config('backpack.base.default_datetime_format', 'D MMM YYYY, HH:mm'));
 
         CRUD::column('fancy_status')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::order.crud.status.label'));
+            ->label(__('backpack-shop::order.crud.status.label'));
 
         CRUD::column('fancy_invoice_no')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::order.crud.order_no.label'));
+            ->label(__('backpack-shop::order.crud.order_no.label'));
 
         CRUD::column('full_address')
             ->type('textarea')
             ->escaped(false)
-            ->label(__('eleven59.backpack-shop::order.crud.full_address.label'));
+            ->label(__('backpack-shop::order.crud.full_address.label'));
 
         CRUD::column('order_items')
             ->type('textarea')
             ->escaped(false)
-            ->label(__('eleven59.backpack-shop::order.crud.order_items.label'));
+            ->label(__('backpack-shop::order.crud.order_items.label'));
 
         CRUD::column('order_total')
             ->type('number')
             ->decimals(2)
             ->prefix(config('eleven59.backpack-shop.currency.sign', '€') . ' ')
-            ->label(__('eleven59.backpack-shop::order.crud.order_total.label'));
+            ->label(__('backpack-shop::order.crud.order_total.label'));
 
         CRUD::orderBy('created_at', 'desc');
 
@@ -76,9 +76,9 @@ class OrderCrudController extends CrudController
             'type' => 'dropdown',
             'label'=> 'Status'
         ], [
-            'new' => __('eleven59.backpack-shop::order.statuses.new'),
-            'cancelled' => __('eleven59.backpack-shop::order.statuses.cancelled'),
-            'paid' => __('eleven59.backpack-shop::order.statuses.paid'),
+            'new' => __('backpack-shop::order.statuses.new'),
+            'cancelled' => __('backpack-shop::order.statuses.cancelled'),
+            'paid' => __('backpack-shop::order.statuses.paid'),
         ], function($value) {
             CRUD::addClause('where', 'status', $value);
         });

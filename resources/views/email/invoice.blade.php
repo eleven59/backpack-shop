@@ -5,7 +5,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    @include('eleven59.backpack-shop::email.css')
+    @include('backpack-shop::email.css')
 
 </head>
 
@@ -18,13 +18,13 @@
             <td>
                 @if ($copy)
                     <div style="background-color: #d4edda; border: 1px solid #c3e6cb; padding: 5px 15px; margin-bottom: 35px; color: #155724; text-shadow: none;">
-                        <p>{{ __('eleven59.backpack-shop::invoice.mail.copy') }}</p>
+                        <p>{{ __('backpack-shop::invoice.mail.copy') }}</p>
                     </div>
                 @endif
 
-                {!! __('eleven59.backpack-shop::invoice.mail.dear-customer', ['customer' => $order->name]) !!}
+                {!! __('backpack-shop::invoice.mail.dear-customer', ['customer' => $order->name]) !!}
 
-                <p style="padding-top: 10px;"><strong>{{ __('eleven59.backpack-shop::invoice.mail.order_summary') }}</strong></p>
+                <p style="padding-top: 10px;"><strong>{{ __('backpack-shop::invoice.mail.order_summary') }}</strong></p>
 
                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     @foreach($order->order_summary['products'] as $product)
@@ -34,15 +34,15 @@
                         </tr>
                     @endforeach
                     <tr>
-                        <td style="border-top: 1px solid #222222; padding-top: 7px; padding-right: 35px; padding-left: 0;"><strong>{{ __('eleven59.backpack-shop::invoice.pdf.subtotal') }}</strong></td>
+                        <td style="border-top: 1px solid #222222; padding-top: 7px; padding-right: 35px; padding-left: 0;"><strong>{{ __('backpack-shop::invoice.pdf.subtotal') }}</strong></td>
                         <td style="border-top: 1px solid #222222; padding-top: 7px; text-align: right; min-width: 60px;" align="right"><strong>{{ config('eleven59.backpack-shop.currency.sign') }} {{ number_format ($order->order_summary['totals']['subtotal_incl_vat'], 2, ',', '.') }}</strong></td>
                     </tr>
                     <tr>
-                        <td style="padding-bottom: 7px; padding-right: 35px; padding-left: 0;"><strong>{{ __('eleven59.backpack-shop::invoice.pdf.shipping') }}</strong></td>
+                        <td style="padding-bottom: 7px; padding-right: 35px; padding-left: 0;"><strong>{{ __('backpack-shop::invoice.pdf.shipping') }}</strong></td>
                         <td style="padding-bottom: 7px; text-align: right; min-width: 60px;" align="right"><strong>{{ config('eleven59.backpack-shop.currency.sign') }} {{ number_format ($order->order_summary['totals']['shipping_incl_vat'], 2, ',', '.') }}</strong></td>
                     </tr>
                     <tr>
-                        <td style="border-top: 1px solid #222222; padding-top: 7px; padding-bottom: 7px; padding-right: 35px; padding-left: 0; text-align: right;"><strong>{{ __('eleven59.backpack-shop::invoice.pdf.total') }}</strong></td>
+                        <td style="border-top: 1px solid #222222; padding-top: 7px; padding-bottom: 7px; padding-right: 35px; padding-left: 0; text-align: right;"><strong>{{ __('backpack-shop::invoice.pdf.total') }}</strong></td>
                         <td style="border-top: 1px solid #222222; padding-top: 7px; padding-bottom: 7px; text-align: right; min-width: 60px;" align="right"><strong>{{ config('eleven59.backpack-shop.currency.sign') }} {{ number_format ($order->order_summary['totals']['total_incl_vat'], 2, ',', '.') }}</strong></td>
                     </tr>
                     @if(isset($order->order_summary['totals']['vat']))
@@ -55,7 +55,7 @@
                     @endif
                 </table>
 
-                {!! __('eleven59.backpack-shop::invoice.mail.bye-customer', ['store' => config('mail.from.name')]) !!}
+                {!! __('backpack-shop::invoice.mail.bye-customer', ['store' => config('mail.from.name')]) !!}
 
             </td>
         </tr>

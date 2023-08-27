@@ -37,10 +37,10 @@ class CartUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'product_id.required' => __('eleven59.backpack-shop::cart.request.product_id.required'),
-            'product_id.exists' => __('eleven59.backpack-shop::cart.request.product_id.exists'),
-            'quantity.required' => __('eleven59.backpack-shop::cart.request.quantity.required'),
-            'quantity.integer' => __('eleven59.backpack-shop::request.product.slug.quantity.integer'),
+            'product_id.required' => __('backpack-shop::cart.request.product_id.required'),
+            'product_id.exists' => __('backpack-shop::cart.request.product_id.exists'),
+            'quantity.required' => __('backpack-shop::cart.request.quantity.required'),
+            'quantity.integer' => __('backpack-shop::request.product.slug.quantity.integer'),
         ];
     }
 }

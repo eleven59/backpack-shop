@@ -30,8 +30,8 @@ class ProductPropertyCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\ProductProperty::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/product-property');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::product-property.crud.singular'),
-            __('eleven59.backpack-shop::product-property.crud.plural')
+            __('backpack-shop::product-property.crud.singular'),
+            __('backpack-shop::product-property.crud.plural')
         );
     }
 
@@ -45,7 +45,7 @@ class ProductPropertyCrudController extends CrudController
     {
         CRUD::column('title')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::product-property.crud.title.label'));
+            ->label(__('backpack-shop::product-property.crud.title.label'));
         CRUD::orderBy('lft');
     }
 
@@ -62,14 +62,14 @@ class ProductPropertyCrudController extends CrudController
         CRUD::field('title')
             ->type('text')
             ->wrapper(['class' => (config('eleven59.backpack-shop.hide-slugs', true) ? 'form-group col-md-12' : 'form-group col-md-6')])
-            ->label(__('eleven59.backpack-shop::product-property.crud.title.label'));
+            ->label(__('backpack-shop::product-property.crud.title.label'));
 
         CRUD::field('slug')
             ->type('slug')
             ->target('title')
             ->wrapper(['class' => (config('eleven59.backpack-shop.hide-slugs', true) ? 'd-none' : 'form-group col-md-6')])
-            ->label(__('eleven59.backpack-shop::product-property.crud.slug.label'))
-            ->hint(__('eleven59.backpack-shop::product-property.crud.slug.hint'));
+            ->label(__('backpack-shop::product-property.crud.slug.label'))
+            ->hint(__('backpack-shop::product-property.crud.slug.hint'));
     }
 
     /**

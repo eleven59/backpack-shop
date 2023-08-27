@@ -28,7 +28,7 @@ class CartController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => __('eleven59.backpack-shop::cart.controller.add.success'),
+            'message' => __('backpack-shop::cart.controller.add.success'),
             'product_count' => shoppingcart()->product_count,
         ]);
     }
@@ -51,7 +51,7 @@ class CartController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => __('eleven59.backpack-shop::cart.controller.update.success'),
+            'message' => __('backpack-shop::cart.controller.update.success'),
             'product_count' => shoppingcart()->product_count,
         ]);
     }
@@ -74,7 +74,7 @@ class CartController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => __('eleven59.backpack-shop::cart.controller.remove.success'),
+            'message' => __('backpack-shop::cart.controller.remove.success'),
             'product_count' => shoppingcart()->product_count,
         ]);
     }

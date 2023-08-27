@@ -30,8 +30,8 @@ class ProductCategoryCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\ProductCategory::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/product-category');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::product-category.crud.singular'),
-            __('eleven59.backpack-shop::product-category.crud.plural')
+            __('backpack-shop::product-category.crud.singular'),
+            __('backpack-shop::product-category.crud.plural')
         );
     }
 
@@ -45,7 +45,7 @@ class ProductCategoryCrudController extends CrudController
     {
         CRUD::column('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::product-category.crud.name.label'));
+            ->label(__('backpack-shop::product-category.crud.name.label'));
         CRUD::orderBy('lft');
     }
 
@@ -60,31 +60,31 @@ class ProductCategoryCrudController extends CrudController
         CRUD::setValidation(ProductCategoryRequest::class);
 
         CRUD::field('name')
-            ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.info'))
+            ->tab(__('backpack-shop::product-category.crud.tabs.info'))
             ->type('text')
             ->wrapper(['class' => (config('eleven59.backpack-shop.hide-slugs', true) ? 'form-group col-md-12' : 'form-group col-md-6')])
-            ->label(__('eleven59.backpack-shop::product-category.crud.name.label'));
+            ->label(__('backpack-shop::product-category.crud.name.label'));
 
         CRUD::field('slug')
-            ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.info'))
+            ->tab(__('backpack-shop::product-category.crud.tabs.info'))
             ->type('slug')
             ->target('name')
             ->wrapper(['class' => (config('eleven59.backpack-shop.hide-slugs', true) ? 'd-none' : 'form-group col-md-6')])
-            ->label(__('eleven59.backpack-shop::product-category.crud.slug.label'))
-            ->hint(__('eleven59.backpack-shop::product-category.crud.slug.hint'));
+            ->label(__('backpack-shop::product-category.crud.slug.label'))
+            ->hint(__('backpack-shop::product-category.crud.slug.hint'));
 
         if(bpshop_show_column('product-category', 'description')) {
             CRUD::field('description')
-                ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.info'))
+                ->tab(__('backpack-shop::product-category.crud.tabs.info'))
                 ->type('wysiwyg')
-                ->label(__('eleven59.backpack-shop::product-category.crud.description.label'));
+                ->label(__('backpack-shop::product-category.crud.description.label'));
         }
 
         if(bpshop_show_column('product-category', 'cover')) {
             $coverField = CRUD::field('cover')
-                ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.media'))
+                ->tab(__('backpack-shop::product-category.crud.tabs.media'))
                 ->type('image')
-                ->label(__('eleven59.backpack-shop::product-category.crud.cover.label'))
+                ->label(__('backpack-shop::product-category.crud.cover.label'))
                 ->aspect_ratio(config('eleven59.backpack-shop.category-cover.aspect-ratio', 0))
                 ->crop(config('eleven59.backpack-shop.category-cover.crop', true))
                 ->disk(config('eleven59.backpack-shop.category-cover.disk', null))
@@ -94,31 +94,31 @@ class ProductCategoryCrudController extends CrudController
         /* Meta/SEO fields */
         if(bpshop_show_column('product-category', 'meta-title')) {
             CRUD::field('meta_title')
-                ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.seo'))
+                ->tab(__('backpack-shop::product-category.crud.tabs.seo'))
                 ->type('text')
-                ->label(__('eleven59.backpack-shop::product-category.crud.meta-title.label'))
-                ->hint(__('eleven59.backpack-shop::product-category.crud.meta-title.hint'));
+                ->label(__('backpack-shop::product-category.crud.meta-title.label'))
+                ->hint(__('backpack-shop::product-category.crud.meta-title.hint'));
         }
 
         if(bpshop_show_column('product-category', 'meta-description')) {
             CRUD::field('meta_description')
-                ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.seo'))
+                ->tab(__('backpack-shop::product-category.crud.tabs.seo'))
                 ->type('textarea')
                 ->attributes([
                     'rows' => '3',
                     'maxlength' => '160',
                     'style' => 'resize: none',
                 ])
-                ->label(__('eleven59.backpack-shop::product-category.crud.meta-description.label'))
-                ->hint(__('eleven59.backpack-shop::product-category.crud.meta-description.hint'));
+                ->label(__('backpack-shop::product-category.crud.meta-description.label'))
+                ->hint(__('backpack-shop::product-category.crud.meta-description.hint'));
         }
 
         if(bpshop_show_column('product-category', 'meta-image')) {
             CRUD::field('meta_image')
-                ->tab(__('eleven59.backpack-shop::product-category.crud.tabs.seo'))
+                ->tab(__('backpack-shop::product-category.crud.tabs.seo'))
                 ->type('image')
-                ->label(__('eleven59.backpack-shop::product-category.crud.meta-image.label'))
-                ->hint(__('eleven59.backpack-shop::product-category.crud.meta-image.hint'))
+                ->label(__('backpack-shop::product-category.crud.meta-image.label'))
+                ->hint(__('backpack-shop::product-category.crud.meta-image.hint'))
                 ->aspect_ratio(config('eleven59.backpack-shop.category-meta-image.aspect-ratio', 1.91))
                 ->crop(config('eleven59.backpack-shop.category-meta-image.crop', true))
                 ->disk(config('eleven59.backpack-shop.category-meta-image.disk', null))

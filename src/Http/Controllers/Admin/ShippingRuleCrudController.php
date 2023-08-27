@@ -32,8 +32,8 @@ class ShippingRuleCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\ShippingRule::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/shipping-rule');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::shipping-rule.crud.singular'),
-            __('eleven59.backpack-shop::shipping-rule.crud.plural')
+            __('backpack-shop::shipping-rule.crud.singular'),
+            __('backpack-shop::shipping-rule.crud.plural')
         );
     }
 
@@ -48,14 +48,14 @@ class ShippingRuleCrudController extends CrudController
         /* Required columns */
         CRUD::column('shipping_region_id')
             ->type('select')
-            ->label(__('eleven59.backpack-shop::shipping-rule.crud.shipping_region_id.label'))
+            ->label(__('backpack-shop::shipping-rule.crud.shipping_region_id.label'))
             ->entity('shipping_region')
             ->attribute('name')
             ->model(ShippingRegion::class);
         if(bpshop_shipping_size_enabled()) {
             CRUD::column('shipping_size_id')
                 ->type('select')
-                ->label(__('eleven59.backpack-shop::shipping-rule.crud.shipping_size_id.label'))
+                ->label(__('backpack-shop::shipping-rule.crud.shipping_size_id.label'))
                 ->entity('shipping_size')
                 ->attribute('name')
                 ->model(ShippingSize::class);
@@ -63,14 +63,14 @@ class ShippingRuleCrudController extends CrudController
         if(bpshop_shipping_weight_enabled()) {
             CRUD::column('max_weight')
                 ->type('number')
-                ->label(__('eleven59.backpack-shop::shipping-rule.crud.max_weight.label'))
+                ->label(__('backpack-shop::shipping-rule.crud.max_weight.label'))
                 ->suffix(' grams')
                 ->decimals(0)
                 ->thousands_sep('');
         }
         CRUD::column('price')
             ->type('number')
-            ->label(__('eleven59.backpack-shop::shipping-rule.crud.price.label'))
+            ->label(__('backpack-shop::shipping-rule.crud.price.label'))
             ->prefix(config('backpack-shop.currency.sign', '€') . ' ')
             ->decimals(2)
             ->thousands_sep('');
@@ -91,7 +91,7 @@ class ShippingRuleCrudController extends CrudController
         /* Required fields */
         CRUD::field('shipping_region_id')
             ->type('select2')
-            ->label(__('eleven59.backpack-shop::shipping-rule.crud.shipping_region_id.label'))
+            ->label(__('backpack-shop::shipping-rule.crud.shipping_region_id.label'))
             ->entity('shipping_region')
             ->attribute('name')
             ->model(ShippingRegion::class);
@@ -99,7 +99,7 @@ class ShippingRuleCrudController extends CrudController
         if(bpshop_shipping_size_enabled()) {
             CRUD::field('shipping_size_id')
                 ->type('select2')
-                ->label(__('eleven59.backpack-shop::shipping-rule.crud.shipping_size_id.label'))
+                ->label(__('backpack-shop::shipping-rule.crud.shipping_size_id.label'))
                 ->entity('shipping_size')
                 ->attribute('name')
                 ->model(ShippingSize::class);
@@ -108,13 +108,13 @@ class ShippingRuleCrudController extends CrudController
         if(bpshop_shipping_weight_enabled()) {
             CRUD::field('max_weight')
                 ->type('number')
-                ->label(__('eleven59.backpack-shop::shipping-rule.crud.max_weight.label'))
-                ->suffix(__('eleven59.backpack-shop::shipping-rule.crud.max_weight.suffix'));
+                ->label(__('backpack-shop::shipping-rule.crud.max_weight.label'))
+                ->suffix(__('backpack-shop::shipping-rule.crud.max_weight.suffix'));
         }
 
         CRUD::field('price')
             ->type('number')
-            ->label(__('eleven59.backpack-shop::shipping-rule.crud.price.label'))
+            ->label(__('backpack-shop::shipping-rule.crud.price.label'))
             ->prefix(config('backpack-shop.currency.sign', '€'))
             ->attributes([
                 'step' => '0.01',
@@ -123,8 +123,8 @@ class ShippingRuleCrudController extends CrudController
 
         CRUD::field('shipping_vat_class_id')
             ->type('select2')
-            ->label(__('eleven59.backpack-shop::shipping-rule.crud.shipping_vat_class_id.label'))
-            ->hint(__('eleven59.backpack-shop::shipping-rule.crud.shipping_vat_class_id.hint'))
+            ->label(__('backpack-shop::shipping-rule.crud.shipping_vat_class_id.label'))
+            ->hint(__('backpack-shop::shipping-rule.crud.shipping_vat_class_id.hint'))
             ->entity('shipping_vat_class')
             ->attribute('name')
             ->model(VatClass::class);
@@ -133,8 +133,8 @@ class ShippingRuleCrudController extends CrudController
         if(bpshop_show_column('shipping-rule', 'vat_class_id')) {
             CRUD::field('vat_class_id')
                 ->type('select2')
-                ->label(__('eleven59.backpack-shop::shipping-rule.crud.vat_class_id.label'))
-                ->hint(__('eleven59.backpack-shop::shipping-rule.crud.vat_class_id.hint'))
+                ->label(__('backpack-shop::shipping-rule.crud.vat_class_id.label'))
+                ->hint(__('backpack-shop::shipping-rule.crud.vat_class_id.hint'))
                 ->entity('vat_class')
                 ->attribute('name')
                 ->model(VatClass::class);

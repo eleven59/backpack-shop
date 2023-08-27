@@ -29,8 +29,8 @@ class ProductStatusCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\ProductStatus::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/product-status');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::product-status.crud.singular'),
-            __('eleven59.backpack-shop::product-status.crud.plural')
+            __('backpack-shop::product-status.crud.singular'),
+            __('backpack-shop::product-status.crud.plural')
         );
     }
 
@@ -44,7 +44,7 @@ class ProductStatusCrudController extends CrudController
     {
         CRUD::column('status')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::product-status.crud.status.label'));
+            ->label(__('backpack-shop::product-status.crud.status.label'));
         CRUD::orderBy('status');
     }
 
@@ -61,18 +61,18 @@ class ProductStatusCrudController extends CrudController
         CRUD::field('status')
             ->type('text')
             ->wrapper(['class' => (config('eleven59.backpack-shop.hide-slugs', true) ? 'form-group col-md-12' : 'form-group col-md-6')])
-            ->label(__('eleven59.backpack-shop::product-status.crud.status.label'));
+            ->label(__('backpack-shop::product-status.crud.status.label'));
 
         CRUD::field('slug')
             ->type('slug')
             ->target('status')
             ->wrapper(['class' => (config('eleven59.backpack-shop.hide-slugs', true) ? 'd-none' : 'form-group col-md-6')])
-            ->label(__('eleven59.backpack-shop::product-status.crud.slug.label'))
-            ->hint(__('eleven59.backpack-shop::product-status.crud.slug.hint'));
+            ->label(__('backpack-shop::product-status.crud.slug.label'))
+            ->hint(__('backpack-shop::product-status.crud.slug.hint'));
 
         CRUD::field('sales_allowed')
             ->type('switch')
-            ->label(__('eleven59.backpack-shop::product-status.crud.sales_allowed.label'))
+            ->label(__('backpack-shop::product-status.crud.sales_allowed.label'))
             ->default(1);
     }
 

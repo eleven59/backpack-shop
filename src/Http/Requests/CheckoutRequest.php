@@ -42,14 +42,14 @@ class CheckoutRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => __('eleven59.backpack-shop::checkout.request.email.required'),
-            'email.email' => __('eleven59.backpack-shop::checkout.request.email.email'),
-            'name.required' => __('eleven59.backpack-shop::checkout.request.name.required'),
-            'address.required' => __('eleven59.backpack-shop::checkout.request.address.required'),
-            'zipcode.required' => __('eleven59.backpack-shop::checkout.request.zipcode.required'),
-            'city.required' => __('eleven59.backpack-shop::checkout.request.city.required'),
-            'country.required' => __('eleven59.backpack-shop::checkout.request.country.required'),
-            'redirect_url.required' => __('eleven59.backpack-shop::checkout.request.redirect_url.required'),
+            'email.required' => __('backpack-shop::checkout.request.email.required'),
+            'email.email' => __('backpack-shop::checkout.request.email.email'),
+            'name.required' => __('backpack-shop::checkout.request.name.required'),
+            'address.required' => __('backpack-shop::checkout.request.address.required'),
+            'zipcode.required' => __('backpack-shop::checkout.request.zipcode.required'),
+            'city.required' => __('backpack-shop::checkout.request.city.required'),
+            'country.required' => __('backpack-shop::checkout.request.country.required'),
+            'redirect_url.required' => __('backpack-shop::checkout.request.redirect_url.required'),
         ];
     }
 }

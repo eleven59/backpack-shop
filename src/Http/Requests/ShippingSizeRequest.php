@@ -37,8 +37,8 @@ class ShippingSizeRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => __('eleven59.backpack-shop::shipping-size.request.name.required'),
-            'name.max' => __('eleven59.backpack-shop::shipping-size.request.name.max'),
+            'name.required' => __('backpack-shop::shipping-size.request.name.required'),
+            'name.max' => __('backpack-shop::shipping-size.request.name.max'),
         ];
     }
 }

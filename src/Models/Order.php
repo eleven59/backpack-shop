@@ -42,9 +42,9 @@ class Order extends Model
         parent::__construct($attributes);
 
         $this->statuses = [
-            'new' => __('eleven59.backpack-shop::order.statuses.new'),
-            'cancelled' => __('eleven59.backpack-shop::order.statuses.cancelled'),
-            'paid' => __('eleven59.backpack-shop::order.statuses.paid'),
+            'new' => __('backpack-shop::order.statuses.new'),
+            'cancelled' => __('backpack-shop::order.statuses.cancelled'),
+            'paid' => __('backpack-shop::order.statuses.paid'),
         ];
     }
 
@@ -84,7 +84,7 @@ class Order extends Model
     public function makePdfInvoice($save = true, $html = false)
     {
         if($html) {
-            return view(config('eleven59.backpack-shop.invoice-pdf-view', 'eleven59.backpack-shop::pdf.invoice'), [
+            return view(config('eleven59.backpack-shop.invoice-pdf-view', 'backpack-shop::pdf.invoice'), [
                 'order' => $this
             ]);
         }
@@ -101,7 +101,7 @@ class Order extends Model
             ]));
         }
 
-        $pdf->loadView(config('eleven59.backpack-shop.invoice-pdf-view', 'eleven59.backpack-shop::pdf.invoice'), [
+        $pdf->loadView(config('eleven59.backpack-shop.invoice-pdf-view', 'backpack-shop::pdf.invoice'), [
             'order' => $this
         ], [], "UTF-8")->setOptions([
             'isRemoteEnabled' => true,

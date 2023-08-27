@@ -19,7 +19,7 @@ class NoPaymentProvider extends \Eleven59\BackpackShopMollie\Models\PaymentProvi
         return [
             'nopayment' => [
                 'id' => 'nopayment',
-                'description' => __('eleven59.backpack-shop::checkout.payment.no_payment'),
+                'description' => __('backpack-shop::checkout.payment.no_payment'),
                 'dependencies' => [],
             ]
         ];

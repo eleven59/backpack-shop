@@ -75,7 +75,7 @@ return [
      * (see Order class and order.php translation file)
      * Note: this needs to be a view that can run with no additional variables provided
      */
-    'payment-return-view' => 'eleven59.backpack-shop::frontend.payment-return',
+    'payment-return-view' => 'backpack-shop::frontend.payment-return',
 
     /*
      * Invoice no. format
@@ -96,14 +96,14 @@ return [
      * This package provides a generic template that should be fine in most cases
      * But you may wish to adapt the style to the look and feel of the website
      */
-    'invoice-pdf-view' => 'eleven59.backpack-shop::pdf.invoice',
+    'invoice-pdf-view' => 'backpack-shop::pdf.invoice',
 
     /*
      * View to use for the order confirmation email
      * This package provides a generic template that should be fine in most cases
      * But you may wish to adapt the style to the look and feel of the website
      */
-    'invoice-mail-view' => 'eleven59.backpack-shop::email.invoice',
+    'invoice-mail-view' => 'backpack-shop::email.invoice',
 
     /*
      * Hide or show slug fields in admin CRUD panel

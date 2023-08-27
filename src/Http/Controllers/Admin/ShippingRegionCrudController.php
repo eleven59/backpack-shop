@@ -29,8 +29,8 @@ class ShippingRegionCrudController extends CrudController
         CRUD::setModel(\Eleven59\BackpackShop\Models\ShippingRegion::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/shipping-region');
         CRUD::setEntityNameStrings(
-            __('eleven59.backpack-shop::shipping-region.crud.singular'),
-            __('eleven59.backpack-shop::shipping-region.crud.plural')
+            __('backpack-shop::shipping-region.crud.singular'),
+            __('backpack-shop::shipping-region.crud.plural')
         );
     }
 
@@ -44,7 +44,7 @@ class ShippingRegionCrudController extends CrudController
     {
         CRUD::column('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::shipping-region.crud.name.label'));
+            ->label(__('backpack-shop::shipping-region.crud.name.label'));
         CRUD::orderBy('name');
     }
 
@@ -60,12 +60,12 @@ class ShippingRegionCrudController extends CrudController
 
         CRUD::field('name')
             ->type('text')
-            ->label(__('eleven59.backpack-shop::shipping-region.crud.name.label'))
-            ->hint(__('eleven59.backpack-shop::shipping-region.crud.name.hint'));
+            ->label(__('backpack-shop::shipping-region.crud.name.label'))
+            ->hint(__('backpack-shop::shipping-region.crud.name.hint'));
 
         CRUD::field('countries')
             ->type('countries')
-            ->label(__('eleven59.backpack-shop::shipping-region.crud.countries.label'));
+            ->label(__('backpack-shop::shipping-region.crud.countries.label'));
     }
 
     /**

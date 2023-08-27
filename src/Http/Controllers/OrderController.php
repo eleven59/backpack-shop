@@ -39,7 +39,7 @@ class OrderController extends Controller
         if($checkoutUrl = $this->processOrder($request)) {
             return Redirect::to($checkoutUrl);
         }
-        return Redirect::back()->withErrors(['msg' => __('eleven59.backpack-shop::order.error-processing')]);
+        return Redirect::back()->withErrors(['msg' => __('backpack-shop::order.error-processing')]);
     }
 
     /**
@@ -55,7 +55,7 @@ class OrderController extends Controller
         return view(config('eleven59.backpack-shop.payment-return-view'), [
             'payment_result' => [
                 'status' => 'new',
-                'msg' => __('eleven59.backpack-shop::order.status-messages.new'),
+                'msg' => __('backpack-shop::order.status-messages.new'),
             ],
         ]);
     }
@@ -74,7 +74,7 @@ class OrderController extends Controller
             $msg = "It seems you have reached this page in an error. Please contact us if you expected something else to happen.";
         } else {
             $status = $this->updatePayment($paymentId) ?? 'error';
-            $msg = __('eleven59.backpack-shop::order.status-messages.'.$status) ?? "Unknown status, please contact us if you expected something else";
+            $msg = __('backpack-shop::order.status-messages.'.$status) ?? "Unknown status, please contact us if you expected something else";
 
             if($status === 'paid' || $status === 'new') {
                 shoppingcart()->empty();
