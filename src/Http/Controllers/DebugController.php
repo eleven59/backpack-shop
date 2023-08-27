@@ -65,7 +65,7 @@ class DebugController extends Controller
     public function email_html(Request $request, $order_id) :View
     {
         $order = Order::find($order_id);
-        return view(config('eleven59.backpack-shop.invoice-mail-view', 'backpack-shop::email.invoice'), [
+        return view(config('eleven59.backpack-shop.invoice-mail-view', 'eleven59.backpack-shop::email.invoice'), [
             'order' => $order,
             'subject' => __('backpack-shop::invoice.mail.title', ['order_no' => $order->fancy_invoice_no]),
             'copy' => false,

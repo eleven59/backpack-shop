@@ -37,7 +37,7 @@ trait DetailsOperation
         });
 
         CRUD::operation('list', function () {
-            CRUD::addButton('line', 'details', 'view', 'backpack-shop::buttons.details', 'beginning');
+            CRUD::addButton('line', 'details', 'view', 'eleven59.backpack-shop::buttons.details', 'beginning');
         });
     }
 
