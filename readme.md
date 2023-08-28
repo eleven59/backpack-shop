@@ -55,6 +55,7 @@ After updating the config file, almost everything should run out of the box, but
 - Define at least one VAT class in the `VAT classes` CRUD panel
 - Define at least one package size (if using, see config) using the `Shipping sizes` CRUD panel
 - Create at least one shipping rule on the `Shipping rules` CRUD panel
+- Maybe add `Categories`, and some `Products`? It's a webshop package after all.
 
 ### Step 5 (optional but recommened) - pick or build payment provider
 
@@ -72,7 +73,11 @@ See [docs/usage.md](./docs/usage.md).
 
 Changes are documented here on Github. Please browse the commit history.
 
-Breaking changes will be listed here, however. None so far.
+Breaking changes are be listed here:
+
+### 0.2.0
+
+- 0.1.x used a single category per product. This version adds a pivot table which replaces this functionality. This means you will have to re-enter all categories manually (or write a quick script to do this automatically). It also means that if you are using $product->category anywhere, this no longer works and will generate an error.
 
 ## Testing
 
@@ -84,7 +89,7 @@ Please see [contributing.md](contributing.md) for a todolist and howtos.
 
 ## Security
 
-If you discover any security related issues, please email info@eleven59.nl instead of using the issue tracker.
+If you discover any security related issues, please send an email to [info@eleven59.nl](mailto:info@eleven59.nl) instead of using the issue tracker.
 
 ## Credits
 
