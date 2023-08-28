@@ -204,6 +204,12 @@ class ShoppingCart extends Model
                 continue;
             }
 
+            // Remove if product is not eligible for order
+            if (!$product->product_status->sales_allowed) {
+                unset ($this->cart['products'][$key]);
+                continue;
+            }
+
             // No variation, product still exists, leave in cart
             if($key === $options['product_id']) {
                 continue;
