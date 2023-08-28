@@ -51,12 +51,13 @@ class ProductCrudController extends CrudController
         CRUD::column('name')
             ->type('text')
             ->label(__('backpack-shop::product.crud.name.label'));
-        CRUD::column('product_category_id')
-            ->type('select')
-            ->label(__('backpack-shop::product.crud.product_category_id.label'))
-            ->entity('product_category')
+        CRUD::column('product_categories')
+            ->type('select_multiple')
+            ->label(__('backpack-shop::product.crud.product_categories.label'))
+            ->entity('product_categories')
             ->attribute('name')
-            ->model(ProductCategory::class);
+            ->model(ProductCategory::class)
+            ->pivot(true);
         CRUD::column('price')
             ->type('number')
             ->label(__('backpack-shop::product.crud.price.label'))
@@ -110,14 +111,15 @@ class ProductCrudController extends CrudController
                 ->label(__('backpack-shop::product.crud.sku.label'));
         }
 
-        CRUD::field('product_category_id')
+        CRUD::field('product_categories')
             ->tab(__('backpack-shop::product.crud.tabs.info'))
-            ->type('select2')
+            ->type('select2_multiple')
             ->wrapper(['class' => 'form-group col-md-6'])
-            ->label(__('backpack-shop::product.crud.product_category_id.label'))
-            ->entity('product_category')
+            ->label(__('backpack-shop::product.crud.product_categories.label'))
+            ->entity('product_categories')
             ->attribute('name')
-            ->model(ProductCategory::class);
+            ->model(ProductCategory::class)
+            ->pivot(true);
 
         CRUD::field('product_status_id')
             ->tab(__('backpack-shop::product.crud.tabs.info'))

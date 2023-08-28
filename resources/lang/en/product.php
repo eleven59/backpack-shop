@@ -27,8 +27,8 @@ return [
         'sku' => [
             'label' => 'SKU',
         ],
-        'product_category_id' => [
-            'label' => 'Category',
+        'product_categories' => [
+            'label' => 'Categories',
         ],
         'product_status_id' => [
             'label' => 'Status',
@@ -131,9 +131,6 @@ return [
             'required_with' => 'A slug of at least 5 characters is required.',
             'min' => 'The slug should be at least 5 characters.',
             'max' => 'The slug can not exceed 255 characters.',
-        ],
-        'product_category_id' => [
-            'exists' => 'The product category does not (or no longer) exist in the database.',
         ],
         'product_status_id' => [
             'required' => 'You have not selected the product status.',

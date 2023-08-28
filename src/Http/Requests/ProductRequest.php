@@ -31,7 +31,6 @@ class ProductRequest extends FormRequest
         return [
             'name' => 'required|min:5|max:255',
             'slug' => 'required_with:name|min:5|max:255',
-            'product_category_id' => 'nullable|exists:product_categories,id',
             'product_status_id' => 'required|exists:product_statuses,id',
             'price' => 'required',
             'vat_class_id' => 'required|exists:vat_classes,id',
@@ -58,7 +57,6 @@ class ProductRequest extends FormRequest
             'slug.required_with' => __('backpack-shop::product.request.slug.required_with'),
             'slug.min' => __('backpack-shop::product.request.slug.min'),
             'slug.max' => __('backpack-shop::product.request.slug.max'),
-            'product_category_id.exists' => __('backpack-shop::product.request.product_category_id.exists'),
             'product_status_id.required' => __('backpack-shop::product.request.product_status_id.required'),
             'product_status_id.exists' => __('backpack-shop::product.request.product_status_id.exists'),
             'price.required' => __('backpack-shop::product.request.price.required'),

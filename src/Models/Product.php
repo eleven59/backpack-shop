@@ -8,6 +8,7 @@ use Eleven59\BackpackImageTraits\Traits\HasImagesInRepeatableFields;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
@@ -174,9 +175,9 @@ class Product extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function product_category() :BelongsTo
+    public function product_categories() :BelongsToMany
     {
-        return $this->belongsTo(ProductCategory::class);
+        return $this->belongsToMany(ProductCategory::class);
     }
 
     public function product_status() :BelongsTo

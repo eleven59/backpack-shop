@@ -27,8 +27,8 @@ return [
         'sku' => [
             'label' => 'SKU',
         ],
-        'product_category_id' => [
-            'label' => 'Categorie',
+        'product_categories' => [
+            'label' => 'Categorieën',
         ],
         'product_status_id' => [
             'label' => 'Status',
@@ -131,9 +131,6 @@ return [
             'required_with' => 'Je hebt geen slug ingevuld voor het product.',
             'min' => 'De slug moet minimaal 5 tekens lang zijn.',
             'max' => 'De slug mag niet langer zijn dan 255 tekens.',
-        ],
-        'product_category_id' => [
-            'exists' => 'De geselecteerde productcategorie bestaat niet (meer) in de database.',
         ],
         'product_status_id' => [
             'required' => 'Je hebt geen status gekozen.',

@@ -6,7 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Eleven59\BackpackImageTraits\Traits\HasImageFields;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ProductCategory extends Model
@@ -36,9 +36,9 @@ class ProductCategory extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function products() :HasMany
+    public function products() :BelongsToMany
     {
-        return $this->hasMany(Product::class)->orderBy('lft');
+        return $this->belongsToMany(Product::class);
     }
 
 
