@@ -155,7 +155,7 @@ return [
     /*
      * Non-standard fields to be displayed in the CRUD admin area for products
      * Accepts full backpack crud field definitions, including 'tab' (default is a separate tab named 'Features'),
-     * but remember you can't use translations, model functions, or complex definitions in config files (so, also no relations unfortunately)
+     * but remember you can't use translations, model functions, or complex definitions in config files.
      *
      * Additionally, use 'beforeField' or 'afterField' to place the field before or after a specific field
      * (use column name, or "features[name]").

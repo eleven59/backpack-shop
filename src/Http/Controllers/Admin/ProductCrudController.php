@@ -162,28 +162,6 @@ class ProductCrudController extends CrudController
                 ->new_item_label(__('backpack-shop::product.crud.properties.new_item_label'));
         }
 
-        if(!empty(config('eleven59.backpack-shop.product_extras', []))) {
-            foreach(config('eleven59.backpack-shop.product_extras') as $name => $extra)
-            {
-                if(is_numeric($name)) $name = $extra['name'] ?? '';
-                if(empty($name)) throw new \Exception("Please make sure all your features have a valid name. See config/eleven59/backpack-shop.php.");
-
-                $field = $extra;
-                $field['name'] = $name;
-                $field['fake'] = true;
-                $field['store_in'] = 'extras';
-                $field['tab'] = $extra['tab'] ?? __('backpack-shop::product.crud.tabs.extras');
-
-                $crudField = CRUD::addField($field);
-                if(!empty($field['afterField'])) {
-                    $crudField->afterField($field['afterField']);
-                }
-                if(!empty($field['beforeField'])) {
-                    $crudField->beforeField($field['beforeField']);
-                }
-            }
-        }
-
         if(bpshop_show_column('product', 'cover')) {
             CRUD::field('cover')
                 ->tab(__('backpack-shop::product.crud.tabs.media'))
@@ -381,6 +359,28 @@ class ProductCrudController extends CrudController
                 ->crop(config('eleven59.backpack-shop.category-meta-image.crop', true))
                 ->disk(config('eleven59.backpack-shop.category-meta-image.disk', null))
                 ->prefix(config('eleven59.backpack-shop.category-meta-image.prefix', null));
+        }
+
+        if(!empty(config('eleven59.backpack-shop.product_extras', []))) {
+            foreach(config('eleven59.backpack-shop.product_extras') as $name => $extra)
+            {
+                if(is_numeric($name)) $name = $extra['name'] ?? '';
+                if(empty($name)) throw new \Exception("Please make sure all your features have a valid name. See config/eleven59/backpack-shop.php.");
+
+                $field = $extra;
+                $field['name'] = $name;
+                $field['fake'] = true;
+                $field['store_in'] = 'extras';
+                $field['tab'] = $extra['tab'] ?? __('backpack-shop::product.crud.tabs.extras');
+
+                $crudField = CRUD::addField($field);
+                if(!empty($field['afterField'])) {
+                    $crudField->afterField($field['afterField']);
+                }
+                if(!empty($field['beforeField'])) {
+                    $crudField->beforeField($field['beforeField']);
+                }
+            }
         }
     }
 
