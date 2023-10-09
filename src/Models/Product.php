@@ -208,6 +208,7 @@ class Product extends Model
         $_properties = (array)json_decode($value);
         $properties = [];
         foreach($_properties as $key => $_property) {
+            if(empty($_property) || empty($_property->property_id)) continue;
             $property = ProductProperty::find($_property->property_id);
             $property->property_id = $_property->property_id;
             $property->value = $_property->value;
@@ -221,6 +222,7 @@ class Product extends Model
         $_photos = (array)json_decode($value);
         $photos = [];
         foreach($_photos as $_photo) {
+            if(empty($_photo)) continue;
             $photos[] = (object)$_photo;
         }
         return $photos;
