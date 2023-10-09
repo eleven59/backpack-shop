@@ -66,7 +66,7 @@ class ProductCategory extends Model
     {
         $this->attributes['cover'] = $this->uploadImageData($value, [
             'delete_path' => $this->cover,
-            'format' => 'jpg',
+            'format' => config('eleven59.backpack-shop.category-cover.format', 'jpg'),
         ]);
     }
 
@@ -74,7 +74,7 @@ class ProductCategory extends Model
     {
         $this->attributes['meta_image'] = $this->uploadImageData($value, [
             'delete_path' => $this->meta_image,
-            'format' => 'jpg',
+            'format' => config('eleven59.backpack-shop.category-meta-image.format', 'jpg'),
         ]);
     }
 }

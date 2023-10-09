@@ -236,7 +236,7 @@ class Product extends Model
     {
         $this->attributes['cover'] = $this->uploadImageData($value, [
             'delete_path' => $this->cover,
-            'format' => 'jpg',
+            'format' => config('eleven59.backpack-shop.product-cover.format', 'jpg'),
         ]);
     }
 
@@ -244,7 +244,7 @@ class Product extends Model
     {
         if(!empty($value)) {
             $this->attributes['photos'] = $this->uploadRepeatableImageData($value, [
-                'format' => 'jpg',
+                'format' => config('eleven59.backpack-shop.product-photos.format', 'jpg'),
             ]);
         }
     }
@@ -253,7 +253,7 @@ class Product extends Model
     {
         if(!empty($value)) {
             $this->attributes['variations'] = $this->uploadRepeatableImageData($value, [
-                'format' => 'jpg',
+                'format' => config('eleven59.backpack-shop.product-variation-photo.format', 'jpg'),
             ]);
         }
     }
@@ -262,7 +262,7 @@ class Product extends Model
     {
         $this->attributes['meta_image'] = $this->uploadImageData($value, [
             'delete_path' => $this->meta_image,
-            'format' => 'jpg',
+            'format' => config('eleven59.backpack-shop.product-meta-image.format', 'jpg'),
         ]);
     }
 }

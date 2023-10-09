@@ -355,10 +355,10 @@ class ProductCrudController extends CrudController
                 ->type('image')
                 ->label(__('backpack-shop::product.crud.meta-image.label'))
                 ->hint(__('backpack-shop::product.crud.meta-image.hint'))
-                ->aspect_ratio(config('eleven59.backpack-shop.category-meta-image.aspect-ratio', 1.91))
-                ->crop(config('eleven59.backpack-shop.category-meta-image.crop', true))
-                ->disk(config('eleven59.backpack-shop.category-meta-image.disk', null))
-                ->prefix(config('eleven59.backpack-shop.category-meta-image.prefix', null));
+                ->aspect_ratio(config('eleven59.backpack-shop.product-meta-image.aspect-ratio', 1.91))
+                ->crop(config('eleven59.backpack-shop.product-meta-image.crop', true))
+                ->disk(config('eleven59.backpack-shop.product-meta-image.disk', null))
+                ->prefix(config('eleven59.backpack-shop.product-meta-image.prefix', null));
         }
 
         if(!empty(config('eleven59.backpack-shop.product_extras', []))) {

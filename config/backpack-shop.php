@@ -120,36 +120,42 @@ return [
         'crop' => true,
 //        'disk' => null,
 //        'prefix' => null,
+        'format' => 'jpg'
     ],
     'category-meta-image' => [
         'aspect-ratio' => 1.91,
         'crop' => true,
 //        'disk' => null,
 //        'prefix' => null,
+//        'format' => 'jpg'
     ],
     'product-cover' => [
         'aspect-ratio' => 0,
         'crop' => true,
 //        'disk' => null,
 //        'prefix' => null,
+//        'format' => 'jpg'
     ],
     'product-photos' => [
         'aspect-ratio' => 0,
         'crop' => true,
 //        'disk' => null,
 //        'prefix' => null,
+//        'format' => 'jpg'
     ],
     'product-meta-image' => [
         'aspect-ratio' => 1.91,
         'crop' => true,
 //        'disk' => null,
 //        'prefix' => null,
+//        'format' => 'jpg'
     ],
     'product-variation-image' => [
         'aspect-ratio' => 0,
         'crop' => true,
 //        'disk' => null,
 //        'prefix' => null,
+//        'format' => 'jpg'
     ],
 
     /*
